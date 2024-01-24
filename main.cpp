@@ -32,6 +32,7 @@ int main(int argc, char* argv[])
 	// COMライブラリの終了
 	CoUninitialize();
 
-	system("pause");
+	// ファイル事にキー入力を無くす場合はコメントアウト
+	//system("pause");
 	return 0;
 }
