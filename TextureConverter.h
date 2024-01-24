@@ -13,6 +13,11 @@ public:
 	/// <param name="filePath">ファイルパス</param>
 	void ConvertTextureWICToDDS(const std::string& filePath);
 
+	/// <summary>
+	/// 使用方法を出力 (表示) する
+	/// </summary>
+	static void OutputUsage();
+
 private:
 	/// <summary>
 	/// テクスチャファイル読み込み

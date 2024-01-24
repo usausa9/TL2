@@ -17,7 +17,13 @@ enum Argument
 
 int main(int argc, char* argv[])
 {
-	assert(argc >= NumArgument);
+	// コマンドライン引数指定無し
+	if (argc < NumArgument)
+	{
+		// 使用方法の表示
+		TextureConverter::OutputUsage();
+		return 0;
+	}
 
 	// COMライブラリの初期化
 	HRESULT hr = CoInitializeEx(nullptr, COINIT_MULTITHREADED);
@@ -33,6 +39,6 @@ int main(int argc, char* argv[])
 	CoUninitialize();
 
 	// ファイル事にキー入力を無くす場合はコメントアウト
-	//system("pause");
+	system("pause");
 	return 0;
 }
