@@ -11,7 +11,11 @@ public:
 	/// テクスチャをWICからDDSに変換する
 	/// </summary>
 	/// <param name="filePath">ファイルパス</param>
-	void ConvertTextureWICToDDS(const std::string& filePath);
+	/// <param name="numOptions">オプションの数</param>
+	/// <param name="options">オプション配列</param>
+	void ConvertTextureWICToDDS(const std::string& filePath,
+								int numOptions = 0, 
+								char* options[] = nullptr);
 
 	/// <summary>
 	/// 使用方法を出力 (表示) する
@@ -41,7 +45,9 @@ private:
 	/// <summary>
 	/// DDSテクスチャとしてファイル書き出し
 	/// </summary>
-	void SaveDDSTextureToFile();
+	/// <param name="numOptions">オプションの数</param>
+	/// <param name="options">オプション配列</param>
+	void SaveDDSTextureToFile(int numOptions, char* options[]);
 
 private:
 	// 画像の情報
