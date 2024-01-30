@@ -44,6 +44,6 @@ int main(int argc, char* argv[])
 	CoUninitialize();
 
 	// ファイル事にキー入力を無くす場合はコメントアウト
-	system("pause");
+	//system("pause");
 	return 0;
 }
